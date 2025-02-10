@@ -97,10 +97,11 @@ hr {
     height: 2px; 
     background-color: lightgray; 
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
     height: 4px; 
     border-radius: 6px;
-    margin-bottom: 70px;
+    margin-top:50px;
+    margin-bottom: 50px;
 }
 
 .program-contents-container{
@@ -132,6 +133,7 @@ hr {
 .program-contents-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);   
+    grid-template-rows: repeat(2, auto); 
     gap: 40px; 
     justify-content: center; 
     align-items: top; 
@@ -163,15 +165,129 @@ hr {
     
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+.container {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 35px;
+    text-align: center;
+    color: #3172d4;
+    margin-bottom: 15px;
+}
+.column {
+    flex: 1;
+    padding: 20px;
+}
+.column p{
+    font-size: 13px;
+    margin: 0 5px;
+    padding: 0;
+}
+.form input, .form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form button {
+    background-color: #3172d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1429px) {
+    .program-items {
+        width: 550px;
     }
 
-    .mid-content nav ul {
+    .title {
+margin-left: 60px;
+    }
+
+}
+
+@media (max-width: 1227px) {
+    .program-contents-container {
+        display: flex;
         flex-direction: column;
-        gap: 10px; 
+        align-items: center;
+    }
+    .program-items {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .title {
+        justify-self: center;
+        text-align: center;
+        margin-left: 0;
     }
 }
+
+@media (max-width: 987px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+    }
+    .column {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+        h1 {
+            font-size: 55px;
+        }
+
+        .pic-container {
+            width: 400px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .program-items {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .column {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .mid-content {
+            display: none;
+        }
+
+
+
+  
+}
+
+
 
